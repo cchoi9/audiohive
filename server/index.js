@@ -10,7 +10,8 @@ const sessionStore = new SequelizeStore({db})
 const PORT = process.env.PORT || 8080
 const app = express()
 const socketio = require('socket.io')
-module.exports = app
+const scraper = require('../scraper')
+const cron = require('node-cron')
 
 // This is a global Mocha hook, used for resource cleanup.
 // Otherwise, Mocha v4+ never quits after tests.
@@ -94,6 +95,29 @@ const createApp = () => {
   })
 }
 
+// scrape stuff before server launches
+// ;(async () => {
+//   try {
+//     await scraper.initialize('new-york-ny')
+
+//     let results = await scraper.getResults(30)
+//     console.log(results)
+//   } catch (error) {
+//     console.log('OUR ERROR', error)
+//   }
+// })()
+cron.schedule('* * * * *', async function() {
+  try {
+    console.log('RUNNING THE CRON! LETS GO')
+    await scraper.initialize('new-york-ny')
+
+    let results = await scraper.getResults(30)
+    console.log(results)
+  } catch (error) {
+    console.log('OUR ERROR', error)
+  }
+})
+
 const startListening = () => {
   // start listening (and create a 'server' object representing our server)
   const server = app.listen(PORT, () =>
@@ -122,3 +146,5 @@ if (require.main === module) {
 } else {
   createApp()
 }
+
+module.exports = app
