@@ -1,17 +1,20 @@
 * {
   box-sizing: border-box;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
-
+/* linear-gradient(
+      to right,
+      rgba(104, 104, 87, 0.801),
+      rgba(24, 24, 21, 0.788)
+    ), */
 body {
-  /* background: linear-gradient(#ffffff, #c0c0c0); */
   background-image: linear-gradient(
-    to right,
-    rgba(66, 66, 62, 0.801),
-    rgba(231, 231, 224, 0.788)
-  );
-  /* url(./img/springfield.jpg); */
-  background-size: cover;
+      to right,
+      rgba(53, 58, 75, 0.815),
+      rgba(34, 36, 41, 0.808)
+    ),
+    url(./img/concert2.jpg);
+  background-size: contain;
   height: 100vh;
   padding: 0;
   margin: 0;
@@ -20,6 +23,52 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.6;
+}
+.home-page h1 {
+  font-size: 72px;
+  font-variant: small-caps;
+  font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+  font-family: Raleway;
+  font-size: 34px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 100;
+  line-height: 34px;
+}
+h3 {
+  font-family: Raleway;
+  font-size: 14px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 700;
+  line-height: 15.4px;
+}
+p {
+  font-family: Raleway;
+  font-size: 14px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+blockquote {
+  font-family: Raleway;
+  font-size: 21px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 30px;
+}
+pre {
+  font-family: Raleway;
+  font-size: 13px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 18.5667px;
 }
 
 a {
@@ -31,6 +80,7 @@ label {
 }
 
 nav a {
+  color: white;
   display: inline-block;
   margin: 1em;
 }
@@ -42,8 +92,8 @@ form div {
 
 nav {
   align-items: center;
-  background-color: #ada6afa6;
-  color: #c0c0c0;
+  background-color: #000000a6;
+  color: #000000;
   display: flex;
   height: 80px;
   padding: 10px;
@@ -51,27 +101,29 @@ nav {
   justify-content: space-between;
 }
 .home-page {
-  margin: 280px;
+  margin: 250px;
   display: flex;
   text-align: center;
   position: center;
   justify-content: center;
-  color: rgb(194, 59, 194);
+  font-weight: 100;
+  font-size: 60px;
+  color: rgb(255, 255, 255);
 }
 
 .animate-welcome {
-  animation-name: moveInLeft;
-  animation-duration: 2s;
+  animation-name: moveInRight;
+  animation-duration: 4s;
 }
 
-@keyframes moveInLeft {
+@keyframes moveInRight {
   0% {
     opacity: 0;
-    transform: translateX(-100px);
+    transform: translateY(100px);
   }
 
   80% {
-    transform: translate(10px);
+    transform: translateY(-7px);
   }
 
   100% {

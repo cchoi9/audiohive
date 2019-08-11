@@ -5,7 +5,7 @@ class HomePage extends Component {
     return (
       <div className="home-page">
         <main>
-          <h1 className="animate-welcome">Welcome to Audio Hive!</h1>
+          <h1 className="animate-welcome">AUDIO HIVE</h1>
         </main>
       </div>
     )
