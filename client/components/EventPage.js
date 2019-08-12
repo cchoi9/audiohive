@@ -28,11 +28,9 @@ class EventPage extends React.Component {
     let concerts = this.state.concerts.filter(concert => {
       let str = ''
       let keys = Object.keys(concert)
-      console.log(keys)
       for (let i = 1; i < 5; i++) {
         str += concert[keys[i]]
       }
-      console.log(str)
       let regex = new RegExp(this.state.search, 'gi')
       console.log(regex)
       return str.match(regex)
@@ -52,18 +50,20 @@ class EventPage extends React.Component {
             <div className="container">
               <div className="input-group mt-5">
                 <div className="input-group-prepend bg-dark b-dark">
-                  <div className="input-group-text bg-dark text-white">@</div>
+                  <div className="b-dark input-group-text bg-dark text-white">
+                    <i className="fa fa-search" aria-hidden="true" />
+                  </div>
                 </div>
                 <input
                   type="text"
                   value={this.state.search}
                   onChange={this.handleChange}
-                  className="form-control"
+                  className="form-control bg-dark text-white"
                   id="inlineFormInputGroup"
-                  placeholder="Search"
+                  placeholder="Search artist, venue, date..."
                 />
               </div>
-              <table className="table table-hover table-responsive mt-5">
+              <table className="table table-hover mt-5 w-100">
                 <thead className="thead-dark">
                   <tr className="text-white">
                     <th className="text-center">Date</th>
