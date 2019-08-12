@@ -14,7 +14,7 @@ body {
       rgba(34, 36, 41, 0.808)
     ),
     url(./img/concert2.jpg);
-  background-size: contain;
+  background-size: cover;
   height: 100vh;
   padding: 0;
   margin: 0;
@@ -113,7 +113,7 @@ nav {
 
 .animate-welcome {
   animation-name: moveInRight;
-  animation-duration: 4s;
+  animation-duration: 3.5s;
 }
 
 @keyframes moveInRight {
@@ -123,7 +123,7 @@ nav {
   }
 
   80% {
-    transform: translateY(-7px);
+    transform: translateY(-2px);
   }
 
   100% {
