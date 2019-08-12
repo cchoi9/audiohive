@@ -9,7 +9,7 @@ export const Concert = props => {
       <td>{concert.artist}</td>
       <td>{concert.venue}</td>
       <td className="td-tickets text-right">
-        <a href={concert.tickets} className="btn btn-primary">
+        <a href={concert.tickets} className="btn btn-primary" target="_blank">
           Tickets
         </a>
       </td>

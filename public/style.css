@@ -115,6 +115,10 @@ nav {
   animation-name: moveInRight;
   animation-duration: 3.5s;
 }
+.img-responsive {
+  max-width: 35%;
+  height: auto;
+}
 
 @keyframes moveInRight {
   0% {
