@@ -49,7 +49,7 @@ const self = {
           break
         }
       }
-    } while (results.lenght <= nr)
+    } while (results.length <= nr)
 
     return results.slice(0, nr)
   },

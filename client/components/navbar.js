@@ -6,23 +6,36 @@ import {logout} from '../store'
 
 const Navbar = ({handleClick, isLoggedIn}) => (
   <div>
-    <nav>
+    <nav className="navbar navbar-expand">
+      <a className="navbar-brand display-4" href="#">
+        AUDIO HIVE
+      </a>
       {isLoggedIn ? (
         <div>
           {/* The navbar will show these links after you log in */}
-          <Link to="/home">Home</Link>
+          <Link className="no-hover" to="/home">
+            Home
+          </Link>
           <a href="#" onClick={handleClick}>
             Logout
           </a>
         </div>
       ) : (
-        <div>
+        <ul className="navbar-nav ml-auto">
           {/* The navbar will show these links before you log in */}
-          <Link to="/">Home</Link>
-          <Link to="/concerts">Concerts</Link>
-          <Link to="/login">Login</Link>
-          <Link to="/signup">Sign Up</Link>
-        </div>
+          <Link className="li-hover" to="/">
+            HOME
+          </Link>
+          <Link className="li-hover" to="/concerts">
+            CONCERTS
+          </Link>
+          <Link className="li-hover" to="/login">
+            LOGIN
+          </Link>
+          <Link className="li-hover" to="/signup">
+            SIGN UP
+          </Link>
+        </ul>
       )}
     </nav>
   </div>

@@ -66,11 +66,11 @@ class EventPage extends React.Component {
               <table className="table table-hover mt-5 w-100">
                 <thead className="thead-dark">
                   <tr className="text-white">
-                    <th className="text-center">Date</th>
+                    <th className="mx-0 ml">Date</th>
                     <th>Time</th>
                     <th>Artist</th>
                     <th>Venue</th>
-                    <th className="text-right text-white">Sale</th>
+                    <th className="text-center mx-auto text-white">Sale</th>
                   </tr>
                 </thead>
                 <tbody>
