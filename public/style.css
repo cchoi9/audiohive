@@ -119,6 +119,9 @@ nav {
   max-width: 35%;
   height: auto;
 }
+.b-dark {
+  border: none;
+}
 
 @keyframes moveInRight {
   0% {
