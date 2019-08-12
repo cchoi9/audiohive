@@ -28,13 +28,13 @@ class EventPage extends React.Component {
         <div className="main main-raised main-translucent">
           <div className="section">
             <div className="container">
-              <table className="table table-hover table-responsive">
+              <table className="table table-hover table-responsive mt-5">
                 <thead className="thead-dark">
-                  <tr>
-                    <th className="text-center text-white">Date</th>
-                    <th className="text-white">Time</th>
-                    <th className="text-white">Artist</th>
-                    <th className="text-white">Venue</th>
+                  <tr className="text-white">
+                    <th className="text-center">Date</th>
+                    <th>Time</th>
+                    <th>Artist</th>
+                    <th>Venue</th>
                     <th className="text-right text-white">Sale</th>
                   </tr>
                 </thead>
