@@ -7,7 +7,7 @@ const passport = require('passport')
 const SequelizeStore = require('connect-session-sequelize')(session.Store)
 const db = require('./db')
 const sessionStore = new SequelizeStore({db})
-const PORT = process.env.PORT || 8080
+const PORT = process.env.PORT || 8000
 const app = express()
 const socketio = require('socket.io')
 const scraper = require('../scraper')
@@ -107,7 +107,7 @@ const createApp = () => {
 //   }
 // })()
 // '0 */6 * * *'
-cron.schedule('*/50 * * * *', async function() {
+cron.schedule('* 8 * * *', async function() {
   try {
     console.log('RUNNING THE CRON! LETS GO')
     await scraper.initialize('new-york-ny')
