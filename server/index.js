@@ -7,7 +7,7 @@ const passport = require('passport')
 const SequelizeStore = require('connect-session-sequelize')(session.Store)
 const db = require('./db')
 const sessionStore = new SequelizeStore({db})
-const PORT = process.env.PORT || 8000
+// const PORT = process.env.PORT || 8000
 const app = express()
 const socketio = require('socket.io')
 const scraper = require('../scraper')
@@ -121,7 +121,7 @@ cron.schedule('* 8 * * *', async function() {
 
 const startListening = () => {
   // start listening (and create a 'server' object representing our server)
-  const server = app.listen(PORT, '0.0.0.0', () =>
+  const server = app.listen(process.env.PORT || 8000, () =>
     console.log(`Mixing it up on port ${PORT}`)
   )
 
