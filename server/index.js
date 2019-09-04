@@ -15,9 +15,9 @@ const cron = require('node-cron')
 
 // This is a global Mocha hook, used for resource cleanup.
 // Otherwise, Mocha v4+ never quits after tests.
-if (process.env.NODE_ENV === 'test') {
-  after('close the session store', () => sessionStore.stopExpiringSessions())
-}
+// if (process.env.NODE_ENV === 'test') {
+//   after('close the session store', () => sessionStore.stopExpiringSessions())
+// }
 
 /**
  * In your development environment, you can keep all of your
@@ -121,7 +121,7 @@ cron.schedule('* 8 * * *', async function() {
 
 const startListening = () => {
   // start listening (and create a 'server' object representing our server)
-  const server = app.listen(PORT, () =>
+  const server = app.listen(PORT, '0.0.0.0', () =>
     console.log(`Mixing it up on port ${PORT}`)
   )
 
