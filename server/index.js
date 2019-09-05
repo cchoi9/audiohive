@@ -107,7 +107,7 @@ const createApp = () => {
 //   }
 // })()
 // '0 */6 * * *'
-cron.schedule('* 8 * * *', async function() {
+cron.schedule('* 2 * * *', async function() {
   try {
     console.log('RUNNING THE CRON! LETS GO')
     await scraper.initialize('new-york-ny')
