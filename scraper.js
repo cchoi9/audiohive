@@ -21,7 +21,8 @@ const self = {
 
   initialize: async scraper => {
     self.browser = await puppeteer.launch({
-      headless: false
+      args: ['--no-sandbox', '--disable-setuid-sandbox'],
+      headless: true
     })
     self.page = await self.browser.newPage()
 
