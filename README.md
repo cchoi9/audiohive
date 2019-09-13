@@ -2,12 +2,14 @@
 
 AudioHive is webscraping application that uniquely handles requests for information based on date, artist, location and venue from ticket vendor websites such as Eventbrite, LiveNation, and Ticketmaster. It retrieves scraped data using from websites regarding concerts happening in the NYC area.
 
+These ticket links are active based on upcoming concert dates.
+
 ## Technologies Used
 - [React](https://reactjs.org/docs/getting-started.html)
 - [Puppeteer](https://developers.google.com/web/tools/puppeteer/get-started)
 - [PostgreSQL](https://www.postgresql.org/about/)
 - [Express](https://expressjs.com/)
-- [Sequelize](https://www.fusioncharts.com/)
+- [Sequelize](https://sequelize.org/master/manual/getting-started.html)
 
 # Features
 
@@ -27,9 +29,13 @@ Utilizes a headless chrome browser, to automate, paginate through results and sc
 ### Requirements
 In order to run AudioHive on your device
 
-In order to fully install all packages & dependencies:
+Install all packages & dependencies:
 - `npm install` in your run time environment 
 
 - `npm run start-dev` to test and preview AudioHive
 
+
+# Future Features
+- Pagination
+- Third party API requests to populate greater list of concerts
 
