@@ -13,10 +13,12 @@ AudioHive is webscraping application that uniquely handles requests for informat
 
 ## Filter
 ![one](https://media.giphy.com/media/iIM85U1IZvl77vELRX/giphy.gif)
+
 Filter by any string characters matching the date, artist, and venue
 
 ## Puppeteer Scraping
 ![two](https://media.giphy.com/media/ZAqfT3asYOAU6zYy8T/giphy.gif)
+
 Utilizes a headless chrome browser, to automate, paginate through results and scrape a specified number of entries from selected website (LiveNation is demonstrated here)
 
 
