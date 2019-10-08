@@ -4,13 +4,6 @@ AudioHive is webscraping application that uniquely handles requests for informat
 
 These ticket links are active based on upcoming concert dates.
 
-## Technologies Used
-- [React](https://reactjs.org/docs/getting-started.html)
-- [Puppeteer](https://developers.google.com/web/tools/puppeteer/get-started)
-- [PostgreSQL](https://www.postgresql.org/about/)
-- [Express](https://expressjs.com/)
-- [Sequelize](https://sequelize.org/master/manual/getting-started.html)
-
 # Features
 
 ## Filter
@@ -23,6 +16,12 @@ Filter by any string characters matching the date, artist, and venue
 
 Utilizes a headless chrome browser, to automate, paginate through results and scrape a specified number of entries from selected website (LiveNation is demonstrated here)
 
+## Technologies Used
+- [React](https://reactjs.org/docs/getting-started.html)
+- [Puppeteer](https://developers.google.com/web/tools/puppeteer/get-started)
+- [PostgreSQL](https://www.postgresql.org/about/)
+- [Express](https://expressjs.com/)
+- [Sequelize](https://sequelize.org/master/manual/getting-started.html)
 
 ## Setup
 
