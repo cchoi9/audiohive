@@ -1,19 +1,10 @@
+// This code initalizes Puppeteer and automates events to navigate, paginate and record results based on element tags. Using PostgreSQL w/ Sequelize, I created and stored the scraped data from LiveNation into my database to serve up on the front end.
+
 const puppeteer = require('puppeteer')
 const Concert = require('./server/db/models/Concert')
 
 const livenation = scraper =>
   `https://www.livenation.com/cities/98151/${scraper}`
-
-// export async function runCron() {
-//   try {
-//     await scraper.initialize('new-york-ny')
-
-//     let results = await scraper.getResults(30)
-//     console.log(results)
-//   } catch (error) {
-//     console.log('OUR ERROR', error)
-//   }
-// }
 
 const self = {
   browser: null,
@@ -22,7 +13,7 @@ const self = {
   initialize: async scraper => {
     self.browser = await puppeteer.launch({
       args: ['--no-sandbox', '--disable-setuid-sandbox'],
-      headless: true
+      headless: false
     })
     self.page = await self.browser.newPage()
 
@@ -101,9 +92,3 @@ const self = {
 }
 
 module.exports = self
-// console.log(
-//   `ARTIST: ${artist},
-// VENUE: ${venue},
-// DATE: ${date}
-// TICKET LINK:${txlink}`
-// )
